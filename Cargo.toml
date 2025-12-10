@@ -2,6 +2,25 @@
 name = "packager_rs"
 version = "0.1.0"
 edition = "2021"
+description = "A unified package manager interface for Linux - search and install packages from apt, snap, flatpak, cargo, and npm"
+license = "MIT OR Apache-2.0"
+homepage = "https://github.com/yourusername/packager_rs"
+repository = "https://github.com/yourusername/packager_rs"
 
 [dependencies]
 anyhow = "1.0"
+
+[package.metadata.deb]
+maintainer = "Yaduraj J <yadu1raj@gmail.com>"
+copyright = "2025, Yaduraj J <yadu1raj@gmail.com>"
+extended-description = """\
+A unified package manager interface for Linux that provides a \
+single search and install interface for multiple package managers \
+including apt, snap, flatpak, cargo, and npm."""
+depends = "$auto, fzf"
+section = "utils"
+priority = "optional"
+assets = [
+    ["target/release/packager_rs", "usr/bin/", "755"],
+    ["README.md", "usr/share/doc/packager_rs/", "644"],
+]
