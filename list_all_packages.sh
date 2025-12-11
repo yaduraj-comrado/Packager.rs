@@ -25,7 +25,9 @@
         # Search most common terms to get reasonable coverage quickly
         for term in "" app browser editor media video music photo image game dev code \
                     tool server database network security office productivity \
-                    chat email note calendar file cloud backup system util; do
+                    chat email note calendar file cloud backup system util \
+                    design graphic 3d figma sketch inkscape blender gimp art \
+                    communication social messaging ide text terminal shell; do
             snap find "$term" 2>/dev/null | tail -n +2 | awk 'NF > 0 && !/^[[:space:]]/ {print "[snap] " $1}' &
         done
         wait

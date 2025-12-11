@@ -1,5 +1,5 @@
 [package]
-name = "packager_rs"
+name = "packer"
 version = "0.1.0"
 edition = "2021"
 description = "A unified package manager interface for Linux - search and install packages from apt, snap, flatpak, cargo, and npm"
@@ -21,6 +21,14 @@ depends = "$auto, fzf"
 section = "utils"
 priority = "optional"
 assets = [
-    ["target/release/packager_rs", "usr/bin/", "755"],
-    ["README.md", "usr/share/doc/packager_rs/", "644"],
+  [
+    "target/release/packager_rs",
+    "usr/bin/",
+    "755",
+  ],
+  [
+    "README.md",
+    "usr/share/doc/packager_rs/",
+    "644",
+  ],
 ]
